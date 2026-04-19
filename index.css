@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #00FF00;
+  --color-neon-purple: #BC13FE;
+  --font-brutal: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-brutal selection:bg-neon-green selection:text-black;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
